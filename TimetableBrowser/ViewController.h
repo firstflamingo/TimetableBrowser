@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class OVDataController;
+
 @interface ViewController : NSViewController
 
+@property (nonatomic, readonly) OVDataController *dataController;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OVDataController.h"
 
 @implementation ViewController
 
@@ -20,6 +21,11 @@
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
+}
+
+- (OVDataController *)dataController
+{
+    return [OVDataController sharedInstance];
 }
 
 @end

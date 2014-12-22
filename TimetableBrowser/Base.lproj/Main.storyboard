@@ -1163,7 +1163,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
-                                                        <binding destination="JEi-rC-MVM" name="value" keyPath="arrangedObjects.lineCode" id="8VL-Eg-RdK"/>
+                                                        <binding destination="JEi-rC-MVM" name="value" keyPath="arrangedObjects.lineCode" id="fPP-E0-eXy"/>
                                                     </connections>
                                                 </tableColumn>
                                                 <tableColumn width="159" minWidth="40" maxWidth="1000" id="F0A-Y4-pZo">

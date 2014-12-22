@@ -31,8 +31,5 @@
     NSString *result = [self.dataController routeFrom:self.origin to:self.destination time:[NSDate date] arriveBy:NO];
     NSLog(@"%@", result);
 }
-- (IBAction)sayHallo:(id)sender {
-    NSLog(@"Hallo");
-}
 
 @end

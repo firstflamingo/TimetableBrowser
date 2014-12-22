@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#include <OpenGL/gl.h>
+#import <OpenGL/gl.h>
 
 @class OVJourneyPattern;
 

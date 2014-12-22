@@ -10,23 +10,23 @@
 	<string>TimetableBrowser</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>26C85A8EB7772CD41EDCAF2C9C04D326A23604F5</key>
-		<string>https://github.com/bliksemlabs/rrrr</string>
 		<key>4492B337DB66D3A76E8E5230DA41D7AFB93DECC4</key>
 		<string>https://github.com/firstflamingo/rrrr_cocoa_wrapper</string>
 		<key>9B63D04A06B867CF008F3AAD62DE7D8C787FFB8A</key>
 		<string>https://github.com/firstflamingo/TimetableBrowser</string>
+		<key>B5A279ABC48D0E29E05C5DF2EFDC33C5D4394CA7</key>
+		<string>https://github.com/bliksemlabs/rrrr</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TimetableBrowser.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>26C85A8EB7772CD41EDCAF2C9C04D326A23604F5</key>
-		<string>../../../rrrr</string>
 		<key>4492B337DB66D3A76E8E5230DA41D7AFB93DECC4</key>
 		<string>../../../rrrr_cocoa_wrapper</string>
 		<key>9B63D04A06B867CF008F3AAD62DE7D8C787FFB8A</key>
 		<string>../..</string>
+		<key>B5A279ABC48D0E29E05C5DF2EFDC33C5D4394CA7</key>
+		<string>../../../rrrr</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/firstflamingo/TimetableBrowser</string>
@@ -40,7 +40,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>26C85A8EB7772CD41EDCAF2C9C04D326A23604F5</string>
+			<string>B5A279ABC48D0E29E05C5DF2EFDC33C5D4394CA7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>rrrr</string>
 		</dict>

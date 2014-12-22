@@ -25,7 +25,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (object == self.patternArrayController) {
-        NSLog(@"change observed %@ %@ %@", keyPath, object, change);
         self.mareyView.pattern = self.patternArrayController.selectedObjects[0];
         [self.mareyView setNeedsDisplay:YES];
     }

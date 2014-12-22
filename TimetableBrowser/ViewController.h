@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class OVDataController;
+@class OVDataController, MareyView;
 
 @interface ViewController : NSViewController
 
 @property (nonatomic, readonly) OVDataController *dataController;
+@property (strong) IBOutlet NSArrayController *patternArrayController;
+@property (weak) IBOutlet MareyView *mareyView;
 
 @end
 

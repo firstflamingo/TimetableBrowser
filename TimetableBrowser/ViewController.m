@@ -8,24 +8,32 @@
 
 #import "ViewController.h"
 #import "OVDataController.h"
+#import "MareyView.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
-}
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
+- (void)awakeFromNib
+{
+    [self.patternArrayController addObserver:self forKeyPath:@"selection" options:NSKeyValueObservingOptionInitial context:nil];    
 }
 
 - (OVDataController *)dataController
 {
     return [OVDataController sharedInstance];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == self.patternArrayController) {
+        NSLog(@"change observed %@ %@ %@", keyPath, object, change);
+        self.mareyView.pattern = self.patternArrayController.selectedObjects[0];
+        [self.mareyView setNeedsDisplay:YES];
+    }
+}
+
+- (void)dealloc
+{
+    [self.patternArrayController removeObserver:self forKeyPath:@"selection"];
 }
 
 @end

@@ -35,6 +35,10 @@
 		4367A1D31A471C0000E8E439 /* tdata_validation.c in Sources */ = {isa = PBXBuildFile; fileRef = 4367A1C41A471C0000E8E439 /* tdata_validation.c */; };
 		4367A1D41A471C0000E8E439 /* tdata.c in Sources */ = {isa = PBXBuildFile; fileRef = 4367A1C61A471C0000E8E439 /* tdata.c */; };
 		4367A1D51A471C0000E8E439 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 4367A1C81A471C0000E8E439 /* util.c */; };
+		C65276491A47C698008E437C /* MareyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C65276481A47C698008E437C /* MareyView.m */; };
+		C652764B1A47C72B008E437C /* fontstash.c in Sources */ = {isa = PBXBuildFile; fileRef = C652764A1A47C72B008E437C /* fontstash.c */; };
+		C652764E1A47C742008E437C /* stb_truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = C652764D1A47C742008E437C /* stb_truetype.c */; };
+		C65276511A47C7FD008E437C /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C65276501A47C7D5008E437C /* DroidSerif-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,13 @@
 		4367A1C71A471C0000E8E439 /* tdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tdata.h; path = "../../rrrr-local/tdata.h"; sourceTree = "<group>"; };
 		4367A1C81A471C0000E8E439 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = util.c; path = "../../rrrr-local/util.c"; sourceTree = "<group>"; };
 		4367A1C91A471C0000E8E439 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = "../../rrrr-local/util.h"; sourceTree = "<group>"; };
+		C65276471A47C68C008E437C /* MareyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MareyView.h; sourceTree = "<group>"; };
+		C65276481A47C698008E437C /* MareyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MareyView.m; sourceTree = "<group>"; };
+		C652764A1A47C72B008E437C /* fontstash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fontstash.c; sourceTree = "<group>"; };
+		C652764C1A47C734008E437C /* fontstash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fontstash.h; sourceTree = "<group>"; };
+		C652764D1A47C742008E437C /* stb_truetype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stb_truetype.c; sourceTree = "<group>"; };
+		C652764F1A47C74D008E437C /* stb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
+		C65276501A47C7D5008E437C /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +163,8 @@
 				4367A1301A470C6100E8E439 /* ViewController.m */,
 				43021D441A471D4C006D5EC3 /* JourneyViewController.h */,
 				43021D451A471D4C006D5EC3 /* JourneyViewController.m */,
+				C65276471A47C68C008E437C /* MareyView.h */,
+				C65276481A47C698008E437C /* MareyView.m */,
 				4367A1321A470C6100E8E439 /* Images.xcassets */,
 				4367A1341A470C6200E8E439 /* Main.storyboard */,
 				4367A14B1A47128700E8E439 /* rrrr */,
@@ -165,6 +178,11 @@
 		4367A1281A470C6100E8E439 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C652764C1A47C734008E437C /* fontstash.h */,
+				C652764A1A47C72B008E437C /* fontstash.c */,
+				C652764F1A47C74D008E437C /* stb_truetype.h */,
+				C652764D1A47C742008E437C /* stb_truetype.c */,
+				C65276501A47C7D5008E437C /* DroidSerif-Regular.ttf */,
 				4367A1291A470C6100E8E439 /* Info.plist */,
 				4367A12D1A470C6100E8E439 /* main.m */,
 			);
@@ -332,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65276511A47C7FD008E437C /* DroidSerif-Regular.ttf in Resources */,
 				4367A1331A470C6100E8E439 /* Images.xcassets in Resources */,
 				4367A1361A470C6200E8E439 /* Main.storyboard in Resources */,
 				43021D601A471E1A006D5EC3 /* timetable.dat in Resources */,
@@ -364,6 +383,7 @@
 				4367A1D21A471C0000E8E439 /* tdata_io_v3_mmap.c in Sources */,
 				43021D5D1A471D60006D5EC3 /* OVTransfer.m in Sources */,
 				4367A1CE1A471C0000E8E439 /* router_dump.c in Sources */,
+				C652764B1A47C72B008E437C /* fontstash.c in Sources */,
 				43021D581A471D60006D5EC3 /* OVDataController.m in Sources */,
 				4367A1CB1A471C0000E8E439 /* geometry.c in Sources */,
 				4367A1CF1A471C0000E8E439 /* router_request.c in Sources */,
@@ -374,8 +394,10 @@
 				43021D5C1A471D60006D5EC3 /* OVStopAct.m in Sources */,
 				43021D571A471D60006D5EC3 /* OVAgency.m in Sources */,
 				43021D461A471D4C006D5EC3 /* JourneyViewController.m in Sources */,
+				C65276491A47C698008E437C /* MareyView.m in Sources */,
 				4367A1D51A471C0000E8E439 /* util.c in Sources */,
 				4367A1D01A471C0000E8E439 /* router_result.c in Sources */,
+				C652764E1A47C742008E437C /* stb_truetype.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

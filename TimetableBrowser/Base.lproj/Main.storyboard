@@ -1352,6 +1352,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
                                                         <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.arrivalString" id="BIm-ew-iTm"/>
+                                                        <binding destination="lYT-ke-rcI" name="fontBold" keyPath="arrangedObjects.allowsAlighting" id="WQu-ja-ffk"/>
                                                     </connections>
                                                 </tableColumn>
                                                 <tableColumn width="40" minWidth="40" maxWidth="1000" id="Ixj-fv-ydh">
@@ -1368,6 +1369,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
                                                         <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.departureString" id="X2B-xj-DzK"/>
+                                                        <binding destination="lYT-ke-rcI" name="fontBold" keyPath="arrangedObjects.allowsBoarding" id="yPx-rr-CSS"/>
                                                     </connections>
                                                 </tableColumn>
                                                 <tableColumn width="205" minWidth="40" maxWidth="1000" id="OO7-yJ-LOw">

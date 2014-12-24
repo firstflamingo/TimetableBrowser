@@ -1456,9 +1456,9 @@
                         <binding destination="lQv-RX-Drc" name="contentArray" keyPath="selection.journeyPatterns" id="MVI-rs-fyd"/>
                     </connections>
                 </arrayController>
-                <arrayController objectClassName="OVTrip" editable="NO" id="wHk-t0-2Ep" userLabel="Trips Array Controller">
+                <arrayController objectClassName="OVVehicleJourney" editable="NO" id="wHk-t0-2Ep" userLabel="VehicleJourneys Array Controller">
                     <connections>
-                        <binding destination="JEi-rC-MVM" name="contentArray" keyPath="selection.trips" id="qgW-Kz-P1f"/>
+                        <binding destination="JEi-rC-MVM" name="contentArray" keyPath="selection.vjs" id="cwY-qg-NrW"/>
                     </connections>
                 </arrayController>
                 <arrayController objectClassName="OVStopAct" editable="NO" id="lYT-ke-rcI" userLabel="Stops Array Controller">

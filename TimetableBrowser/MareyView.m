@@ -178,23 +178,23 @@
     
     for (uint8_t i_selection = 0; i_selection < n_selection; ++i_selection) {
         journey_pattern_t *jps = &self.pattern.ctx->journey_patterns[selection[i_selection]];
-        trip_t *trips = self.pattern.ctx->trips + jp->trip_ids_offset;
+        vehicle_journey_t *vjs = self.pattern.ctx->vjs + jp->vj_ids_offset;
         
-        for (uint16_t i_trip = 0; i_trip < jps->n_trips; ++i_trip) {
-            stoptime_t *stop_times = self.pattern.ctx->stop_times + trips[i_trip].stop_times_offset;
+        for (uint16_t i_vj = 0; i_vj < jps->n_vjs; ++i_vj) {
+            stoptime_t *stop_times = self.pattern.ctx->stop_times + vjs[i_vj].stop_times_offset;
         
             glBegin(GL_LINE_STRIP);
 //            NSLog(@"%s", &self.pattern.ctx->line_codes[jps->line_code_index]);
             for (uint16_t j_stop = 0; j_stop < jps->n_stops; ++j_stop) {
                 for (uint16_t i_stop = 0; i_stop < jp->n_stops; ++i_stop) {
                     if (self.pattern.ctx->journey_pattern_points[jps->journey_pattern_point_offset + j_stop] == self.pattern.ctx->journey_pattern_points[jp->journey_pattern_point_offset + i_stop]) {
-                        int32_t from_time = trips[i_trip].begin_time + stop_times[j_stop].arrival - jp->min_time;
-                        int32_t to_time = trips[i_trip].begin_time + stop_times[j_stop].arrival - jp->min_time;
+                        int32_t from_time = vjs[i_vj].begin_time + stop_times[j_stop].arrival - jp->min_time;
+                        int32_t to_time = vjs[i_vj].begin_time + stop_times[j_stop].arrival - jp->min_time;
                     
                         if (from_time >= 0 && to_time >= 0 && (to_time - (jp->max_time - jp->min_time)) < 0) {
-                            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (trips[i_trip].begin_time + stop_times[j_stop].arrival - jp->min_time) + OFFSET_BOTTOM);
+                            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (vjs[i_vj].begin_time + stop_times[j_stop].arrival - jp->min_time) + OFFSET_BOTTOM);
                             if (stop_times[j_stop].arrival == stop_times[j_stop].departure) continue;
-                            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (trips[i_trip].begin_time + stop_times[j_stop].departure - jp->min_time) + OFFSET_BOTTOM);
+                            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (vjs[i_vj].begin_time + stop_times[j_stop].departure - jp->min_time) + OFFSET_BOTTOM);
                     
                         }
                 
@@ -205,19 +205,19 @@
         }
     }
     
-    /* Now draw the trips */
+    /* Now draw the vehicle journeys */
     glLineWidth(0.6f);
-    trip_t *trips = self.pattern.ctx->trips + jp->trip_ids_offset;
+    vehicle_journey_t *vjs = self.pattern.ctx->vjs + jp->vj_ids_offset;
     
     glColor3f(0.0f, 1.0f, 0.0f);
-    for (uint16_t i_trip = 0; i_trip < jp->n_trips; ++i_trip) {
-        stoptime_t *stop_times = self.pattern.ctx->stop_times + trips[i_trip].stop_times_offset;
+    for (uint16_t i_vj = 0; i_vj < jp->n_vjs; ++i_vj) {
+        stoptime_t *stop_times = self.pattern.ctx->stop_times + vjs[i_vj].stop_times_offset;
         
         glBegin(GL_LINE_STRIP);
         for (uint16_t i_stop = 0; i_stop < jp->n_stops; ++i_stop) {
-            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (trips[i_trip].begin_time + stop_times[i_stop].arrival - jp->min_time) + OFFSET_BOTTOM);
+            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (vjs[i_vj].begin_time + stop_times[i_stop].arrival - jp->min_time) + OFFSET_BOTTOM);
             if (stop_times[i_stop].arrival == stop_times[i_stop].departure) continue;
-            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (trips[i_trip].begin_time + stop_times[i_stop].departure - jp->min_time) + OFFSET_BOTTOM);
+            glVertex2f(scale_x * distances[i_stop] + OFFSET, scale_y * (vjs[i_vj].begin_time + stop_times[i_stop].departure - jp->min_time) + OFFSET_BOTTOM);
         }
         glEnd();
     }
@@ -252,20 +252,20 @@
     
 #define FONTSIZE 13.0f
     
-    for (uint16_t i_trip = 0; i_trip < jp->n_trips; ++i_trip) {
+    for (uint16_t i_vj = 0; i_vj < jp->n_vjs; ++i_vj) {
         char tmp[6];
         uint16_t minutes;
-        stoptime_t *stop_times = self.pattern.ctx->stop_times + trips[i_trip].stop_times_offset;
+        stoptime_t *stop_times = self.pattern.ctx->stop_times + vjs[i_vj].stop_times_offset;
         
-        minutes = RTIME_TO_SEC(trips[i_trip].begin_time + stop_times[0].departure) / 60;
+        minutes = RTIME_TO_SEC(vjs[i_vj].begin_time + stop_times[0].departure) / 60;
         sprintf(tmp, "%02d:%02d", minutes / 60, minutes % 60);
         
-        sth_draw_text(stash, droidRegular, FONTSIZE, 0, scale_y * (trips[i_trip].begin_time + stop_times[0].departure - jp->min_time) + OFFSET_BOTTOM - 2, 0.0f, tmp, NULL);
+        sth_draw_text(stash, droidRegular, FONTSIZE, 0, scale_y * (vjs[i_vj].begin_time + stop_times[0].departure - jp->min_time) + OFFSET_BOTTOM - 2, 0.0f, tmp, NULL);
         
-        minutes = RTIME_TO_SEC(trips[i_trip].begin_time + stop_times[jp->n_stops - 1].arrival) / 60;
+        minutes = RTIME_TO_SEC(vjs[i_vj].begin_time + stop_times[jp->n_stops - 1].arrival) / 60;
         sprintf(tmp, "%02d:%02d", minutes / 60, minutes % 60);
         
-        sth_draw_text(stash, droidRegular, FONTSIZE, self.bounds.size.width - OFFSET + 5, scale_y * (trips[i_trip].begin_time + stop_times[jp->n_stops - 1].arrival - jp->min_time) + OFFSET_BOTTOM - 2, 0.0f, tmp, NULL);
+        sth_draw_text(stash, droidRegular, FONTSIZE, self.bounds.size.width - OFFSET + 5, scale_y * (vjs[i_vj].begin_time + stop_times[jp->n_stops - 1].arrival - jp->min_time) + OFFSET_BOTTOM - 2, 0.0f, tmp, NULL);
     }
     
     sth_end_draw(stash);

@@ -1351,8 +1351,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
-                                                        <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.arrivalString" id="BIm-ew-iTm"/>
-                                                        <binding destination="lYT-ke-rcI" name="fontBold" keyPath="arrangedObjects.allowsAlighting" id="WQu-ja-ffk"/>
+                                                        <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.arrivalAttributedString" id="7Yc-F8-ePM"/>
                                                     </connections>
                                                 </tableColumn>
                                                 <tableColumn width="40" minWidth="40" maxWidth="1000" id="Ixj-fv-ydh">
@@ -1368,8 +1367,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
-                                                        <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.departureString" id="X2B-xj-DzK"/>
-                                                        <binding destination="lYT-ke-rcI" name="fontBold" keyPath="arrangedObjects.allowsBoarding" id="yPx-rr-CSS"/>
+                                                        <binding destination="lYT-ke-rcI" name="value" keyPath="arrangedObjects.departureAttributedString" id="MBU-5E-fm4"/>
                                                     </connections>
                                                 </tableColumn>
                                                 <tableColumn width="205" minWidth="40" maxWidth="1000" id="OO7-yJ-LOw">

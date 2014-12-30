@@ -31,6 +31,8 @@
 		4391B9CE1A482C39008B89C6 /* router.c in Sources */ = {isa = PBXBuildFile; fileRef = 4391B9C41A482C39008B89C6 /* router.c */; };
 		4391B9CF1A482C39008B89C6 /* tdata.c in Sources */ = {isa = PBXBuildFile; fileRef = 4391B9C71A482C39008B89C6 /* tdata.c */; };
 		4391B9D01A482C39008B89C6 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 4391B9C91A482C39008B89C6 /* util.c */; };
+		439B08821A52981400BCFA44 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 439B08811A52981400BCFA44 /* README.md */; };
+		439B08841A5298DB00BCFA44 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 439B08831A5298DB00BCFA44 /* LICENSE */; };
 		43D1B5B91A4AFEEA0078B31F /* OVStopAct+TimetableFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D1B5B81A4AFEEA0078B31F /* OVStopAct+TimetableFormatting.m */; };
 		C65276491A47C698008E437C /* MareyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C65276481A47C698008E437C /* MareyView.m */; };
 		C652764B1A47C72B008E437C /* fontstash.c in Sources */ = {isa = PBXBuildFile; fileRef = C652764A1A47C72B008E437C /* fontstash.c */; };
@@ -98,6 +100,8 @@
 		4391B9C81A482C39008B89C6 /* tdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tdata.h; path = ../../rrrr/tdata.h; sourceTree = "<group>"; };
 		4391B9C91A482C39008B89C6 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = util.c; path = ../../rrrr/util.c; sourceTree = "<group>"; };
 		4391B9CA1A482C39008B89C6 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../../rrrr/util.h; sourceTree = "<group>"; };
+		439B08811A52981400BCFA44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		439B08831A5298DB00BCFA44 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		43D1B5B71A4AFEEA0078B31F /* OVStopAct+TimetableFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OVStopAct+TimetableFormatting.h"; sourceTree = "<group>"; };
 		43D1B5B81A4AFEEA0078B31F /* OVStopAct+TimetableFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OVStopAct+TimetableFormatting.m"; sourceTree = "<group>"; };
 		C65276471A47C68C008E437C /* MareyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MareyView.h; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				4391B9BC1A482BBB008B89C6 /* rrrr */,
 				4367A14C1A47128F00E8E439 /* rrrr_cocoa_wrapper */,
 				4367A14D1A47129E00E8E439 /* timetable */,
+				439B08801A5297BD00BCFA44 /* Meta */,
 				4367A1281A470C6100E8E439 /* Supporting Files */,
 			);
 			path = TimetableBrowser;
@@ -258,6 +263,16 @@
 			name = rrrr;
 			sourceTree = "<group>";
 		};
+		439B08801A5297BD00BCFA44 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				439B08811A52981400BCFA44 /* README.md */,
+				439B08831A5298DB00BCFA44 /* LICENSE */,
+			);
+			name = Meta;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,6 +357,7 @@
 				4367A1331A470C6100E8E439 /* Images.xcassets in Resources */,
 				4367A1361A470C6200E8E439 /* Main.storyboard in Resources */,
 				43021D601A471E1A006D5EC3 /* timetable.dat in Resources */,
+				439B08841A5298DB00BCFA44 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +379,7 @@
 				4357AACB1A484608009D47F7 /* router_request.c in Sources */,
 				4391B9CE1A482C39008B89C6 /* router.c in Sources */,
 				4391B9CF1A482C39008B89C6 /* tdata.c in Sources */,
+				439B08821A52981400BCFA44 /* README.md in Sources */,
 				4391B9D01A482C39008B89C6 /* util.c in Sources */,
 				43021D591A471D60006D5EC3 /* OVJourneyPattern.m in Sources */,
 				4391B9CC1A482C39008B89C6 /* geometry.c in Sources */,
